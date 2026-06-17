@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Layout */
+.welcome-container {
+  height: 100vh;
+  display: flex;
+  background: #ffffff;
+}
+
+/* LEFT IMAGE */
+.image-section {
+  width: 50%;
+  overflow: hidden;
+}
+
+.image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  animation: zoom 15s infinite alternate ease-in-out;
+}
+
+/* RIGHT SIDE */
+.content-section {
+  width: 50%;
+  padding: 60px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  animation: slideIn 1s ease;
+}
+
+/* TITLE */
+.title {
+  font-size: 42px;
+  font-weight: bold;
+  color: #ff3c3c; /* pizza red */
+}
+
+/* FUNNY TEXT */
+.funny {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* TAGLINE */
+.tagline {
+  margin-top: 12px;
+  font-size: 16px;
+  color: #888;
+}
+
+/* BUTTONS */
+.buttons {
+  margin-top: 30px;
+}
+
+.btn {
+  padding: 14px 30px;
+  margin-right: 15px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+/* ✅ LOGIN (pizza orange gradient) */
+.login-btn {
+  background: linear-gradient(135deg, #ff7a18, #ff3c3c);
+  color: white;
+}
+
+.login-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0px 8px 20px rgba(255, 60, 60, 0.4);
+}
+
+/* ✅ REGISTER (soft green contrast) */
+.register-btn {
+  background: linear-gradient(135deg, #28a745, #5cd65c);
+  color: white;
+}
+
+.register-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0px 8px 20px rgba(40, 167, 69, 0.4);
+}
+
+/* ✅ Animations */
+@keyframes zoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
